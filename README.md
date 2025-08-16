@@ -32,31 +32,30 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            /* Animated gradient combining original and TikTok colors */
             background: linear-gradient(-45deg, #000000, #1d0c33, #f72585, #4cc9f0, #3a0ca3);
             background-size: 400% 400%;
             animation: animateBackground 20s ease infinite;
             background-attachment: fixed;
             color: var(--text-light);
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 1400px;
+            margin: 15px auto;
+            padding: 0;
         }
 
         .header {
             text-align: center;
             padding-bottom: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
-        
+
         .header .date-display {
-            font-size: 3em;
+            font-size: 2.8em;
             font-weight: 700;
             margin: 0;
             color: #fff;
@@ -64,13 +63,13 @@
         }
 
         .header .time-display {
-            font-size: 1.8em;
+            font-size: 1.6em;
             font-weight: 600;
             margin: 5px 0 0;
             color: #fff;
             text-shadow: 0 0 8px var(--glow-shadow-secondary);
         }
-        
+
         .header .subtitle {
             color: #ffffff;
             margin: 10px 0 0;
@@ -78,23 +77,24 @@
             font-weight: 700;
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
         }
-        
+
         .grid-container {
             display: grid;
-            gap: 25px;
-            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         }
 
         .card {
             background: var(--card-bg);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            padding: 24px;
+            padding: 22px;
             border-radius: 16px;
             border: 1px solid var(--card-border);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
+            min-height: 250px;
         }
 
         .card:hover {
@@ -106,21 +106,23 @@
             margin-top: 0;
             border-bottom: 2px solid;
             border-image: linear-gradient(to right, var(--primary-accent), var(--secondary-accent)) 1;
-            padding-bottom: 12px;
-            margin-bottom: 18px;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
             color: var(--text-light);
             font-weight: 600;
             display: flex;
             align-items: center;
+            font-size: 1.3em;
         }
-        
+
         .card h2 .emoji-icon {
             font-size: 1.2em;
             margin-right: 12px;
         }
-
+        
         .card textarea {
             width: 100%;
+            flex-grow: 1;
             min-height: 150px;
             padding: 12px;
             background-color: rgba(0, 0, 0, 0.2);
@@ -169,7 +171,7 @@
             font-size: 0.8em;
             font-style: italic;
         }
-        
+
         .rss-refresh-btn {
             background: transparent;
             border: 1px solid var(--card-border);
@@ -179,20 +181,20 @@
             cursor: pointer;
             font-size: 0.85em;
             transition: all 0.3s ease;
-            margin-top: 15px;
+            margin-top: auto; /* Push to the bottom */
         }
         .rss-refresh-btn:hover {
             border-color: var(--secondary-accent);
             color: var(--secondary-accent);
             box-shadow: var(--glow-shadow-secondary);
         }
-        
+
         .rss-loading {
             text-align: center;
             padding: 20px;
             color: var(--text-secondary);
         }
-        
+
         .rss-error {
             color: #ff6b6b;
             font-size: 0.9em;
@@ -201,7 +203,7 @@
             background-color: rgba(255, 107, 107, 0.1);
             border-radius: 8px;
         }
-        
+
         .connect-link {
             display: inline-block;
             background: linear-gradient(90deg, var(--primary-accent), #c03089);
@@ -213,13 +215,14 @@
             font-weight: 600;
             border: none;
             text-align: center;
+            margin-top: auto;
         }
-        
+
         .connect-link:hover {
             transform: translateY(-2px);
             box-shadow: var(--glow-shadow-primary);
         }
-        
+
         .nyt-link {
             background: transparent;
             border: 1px solid var(--secondary-accent);
@@ -233,7 +236,7 @@
             margin-top: 10px;
             text-align: center;
         }
-        
+
         .nyt-link:hover {
             background-color: var(--secondary-accent);
             color: #111;
@@ -253,7 +256,7 @@
             margin-bottom: 15px;
             text-shadow: 0 0 10px var(--glow-shadow-secondary);
         }
-        
+
         .timer-controls {
             display: flex;
             justify-content: center;
@@ -261,7 +264,7 @@
             flex-wrap: wrap;
             margin-bottom: 15px;
         }
-        
+
         .timer-btn, .timer-control-btn {
             background-color: transparent;
             color: var(--text-light);
@@ -304,10 +307,10 @@
             background: rgba(0, 0, 0, 0.3);
             border-radius: 12px;
             padding: 15px;
-            margin-top: 20px;
+            margin-top: auto;
             border: 1px solid var(--card-border);
         }
-        
+
         .calc-display {
             width: 100%;
             height: 60px;
@@ -321,13 +324,13 @@
             margin-bottom: 15px;
             font-family: 'Courier New', monospace;
         }
-        
+
         .calc-buttons {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
         }
-        
+
         .calc-btn {
             height: 45px;
             border: 1px solid var(--card-border);
@@ -339,23 +342,23 @@
             transition: all 0.3s ease;
             font-size: 1.1em;
         }
-        
+
         .calc-btn:hover {
             background: var(--secondary-accent);
             color: #111;
             transform: translateY(-2px);
         }
-        
+
         .calc-btn.operator {
             background: var(--primary-accent);
             color: white;
         }
-        
+
         .calc-btn.clear {
             background: var(--red-accent);
             color: white;
         }
-        
+
         .calc-btn.equals {
             background: var(--green-accent);
             color: white;
@@ -374,6 +377,7 @@
             color: var(--text-secondary);
             cursor: pointer;
             transition: all 0.3s ease;
+            flex-grow: 1;
         }
         .image-placeholder:hover {
             border-color: var(--primary-accent);
@@ -392,6 +396,9 @@
         .remove-btn:hover { background-color: #c62828; }
 
         /* Agenda Styles */
+        #agenda-list {
+            flex-grow: 1;
+        }
         .agenda-item {
             background-color: rgba(0,0,0,0.2);
             border: 1px solid var(--card-border);
@@ -421,6 +428,7 @@
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
+            margin-top: 10px;
         }
         .add-item-btn:hover {
             background-color: var(--secondary-accent);
@@ -435,6 +443,9 @@
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         .meme-text {
             font-size: 0.95em;
@@ -442,6 +453,7 @@
             color: var(--text-light);
             font-style: italic;
             margin-bottom: 8px;
+            flex-grow: 1;
         }
         .meme-footer {
             font-size: 0.8em;
@@ -478,7 +490,7 @@
             border-color: var(--red-accent);
             color: var(--red-accent);
         }
-        
+
         /* Meme Image Display */
         .meme-image-container {
             margin: 15px 0;
@@ -494,7 +506,7 @@
             border-radius: 8px;
             border: 1px solid var(--card-border);
         }
-        
+
         .custom-meme-input {
             width: 100%;
             min-height: 80px;
@@ -516,11 +528,11 @@
         /* Educational Resources Grid */
         .resources-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 12px;
             margin-top: 15px;
         }
-        
+
         .resource-link {
             background: rgba(0, 0, 0, 0.3);
             border: 1px solid var(--card-border);
@@ -530,33 +542,40 @@
             text-decoration: none;
             text-align: center;
             font-weight: 600;
-            font-size: 0.9em;
+            font-size: 0.85em;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 5px;
         }
-        
+
         .resource-link:hover {
             background-color: var(--secondary-accent);
             color: #111;
             transform: translateY(-3px);
             box-shadow: var(--glow-shadow-secondary);
         }
-        
+
         .resource-emoji {
             font-size: 1.5em;
         }
 
         @media (max-width: 768px) {
-            .container { padding: 15px; }
+            .container { padding: 10px; }
             .header .date-display { font-size: 2.2em; }
             .header .time-display { font-size: 1.5em; }
             .grid-container { grid-template-columns: 1fr; }
             .calc-buttons { grid-template-columns: repeat(4, 1fr); }
             .resources-grid { grid-template-columns: repeat(2, 1fr); }
         }
+        
+        @media (min-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -566,7 +585,6 @@
         </div>
 
         <div class="grid-container">
-            <!-- Row 1 -->
             <div class="card">
                 <h1 class="date-display"><span id="currentDate"></span></h1>
                 <p class="time-display"><span id="currentTime"></span></p>
@@ -585,12 +603,12 @@
                 <div id="agenda-list"></div>
                 <button class="add-item-btn" id="add-agenda-btn">+ Add Item</button>
             </div>
+            
             <div class="card">
                 <h2><span class="emoji-icon">🧠</span>Learning Objective</h2>
                 <textarea id="learningObjective" placeholder="Type today's learning objective..."></textarea>
             </div>
 
-            <!-- Row 2 -->
             <div class="card">
                 <h2><span class="emoji-icon">🤝</span>Check and Connect</h2>
                 <div class="daily-meme">
@@ -608,10 +626,11 @@
                 </div>
                 <textarea class="custom-meme-input" id="custom-meme-input" placeholder="Write your own meme or funny saying for today..."></textarea>
                 <input type="file" id="meme-image-input" style="display: none;" accept="image/*">
-                <div style="margin-top: 15px;">
+                <div style="margin-top: auto;">
                     <a href="https://edtomorrow.com" target="_blank" class="connect-link">First Five</a>
                 </div>
             </div>
+
             <div class="card">
                 <h2><span class="emoji-icon">😂</span> Daily Drop</h2>
                 <div class="image-placeholder" id="meme-placeholder">
@@ -621,19 +640,15 @@
                 <button id="removeMemeBtn" class="remove-btn">Remove Photo</button>
             </div>
 
-            <!-- Row 3 -->
             <div class="card">
                 <h2><span class="emoji-icon">🏛️</span>On This Day</h2>
                 <p>Discover historical events and educational facts from today's date.</p>
-                <a href="https://www.britannica.com/on-this-day" target="_blank" class="nyt-link">On This Day</a>
-                <a href="https://www.britannica.com/one-good-fact" target="_blank" class="nyt-link">One Good Fact</a>
+                <div style="margin-top: auto;">
+                    <a href="https://www.britannica.com/on-this-day" target="_blank" class="nyt-link">On This Day</a>
+                    <a href="https://www.britannica.com/one-good-fact" target="_blank" class="nyt-link">One Good Fact</a>
+                </div>
             </div>
             
-            <div class="card">
-                <h2><span class="emoji-icon">🎯</span>Spin the Wheel Games</h2>
-                <a href="https://www.bookwidgets.com/play/t:8A9H5RyMH6g3EyzC2gGctbNUhTHANsRXusUza697R601RDhQOTU2" target="_blank" class="nyt-link">🔢 Math Operations</a>
-                <a href="https://www.bookwidgets.com/play/t:jKpdolAwagBdJipmBauwdd9aAwSrmJk8fkyVxP-plypERDdQNURU" target="_blank" class="nyt-link">✍️ Drawing Challenge</a>
-            </div>
             <div class="card">
                 <h2><a href="https://thekidshouldseethis.com/" target="_blank" style="color: inherit; text-decoration: none; display: flex; align-items: center;"><span class="emoji-icon">📺</span>The Kids Should See This</a></h2>
                 <div id="rss-feed" class="rss-feed">
@@ -641,25 +656,28 @@
                 </div>
                 <button id="refresh-rss" class="rss-refresh-btn">Refresh Feed</button>
             </div>
-            
-            <!-- Row 4 -->
+
             <div class="card">
                 <h2><a href="https://ed.ted.com/" target="_blank" style="color: inherit; text-decoration: none; display: flex; align-items: center;"><span class="emoji-icon">🎓</span>TED-Ed Videos</a></h2>
                 <p>Explore engaging educational videos covering science, history, literature, and more.</p>
-                <a href="https://ed.ted.com/lessons?category=science" target="_blank" class="nyt-link">Science Lessons</a>
-                <a href="https://ed.ted.com/lessons?category=literature-language" target="_blank" class="nyt-link">Literature & Language</a>
-                <a href="https://ed.ted.com/lessons?category=history-social-studies" target="_blank" class="nyt-link">History & Social Studies</a>
-                <a href="https://ed.ted.com/lessons?category=mathematics" target="_blank" class="nyt-link">Mathematics</a>
-            </div>
-            <div class="card">
-                <h2><a href="https://www.nytimes.com/section/learning" target="_blank" style="color: inherit; text-decoration: none; display: flex; align-items: center;"><span class="emoji-icon">🗞️</span>NYT Learning Network</a></h2>
-                <a href="https://www.nytimes.com/column/learning-student-opinion" target="_blank" class="nyt-link">Student Opinion Questions</a>
-                <a href="https://www.nytimes.com/spotlight/accessible-activities" target="_blank" class="nyt-link">Picture Prompts</a>
-                <a href="https://www.nytimes.com/column/learning-word-of-the-day" target="_blank" class="nyt-link">Word of the Day</a>
-                <a href="https://www.nytimes.com/spotlight/learning-contests" target="_blank" class="nyt-link">Contests</a>
+                <div style="margin-top: auto;">
+                    <a href="https://ed.ted.com/lessons?category=science" target="_blank" class="nyt-link">Science Lessons</a>
+                    <a href="https://ed.ted.com/lessons?category=literature-language" target="_blank" class="nyt-link">Literature & Language</a>
+                    <a href="https://ed.ted.com/lessons?category=history-social-studies" target="_blank" class="nyt-link">History & Social Studies</a>
+                    <a href="https://ed.ted.com/lessons?category=mathematics" target="_blank" class="nyt-link">Mathematics</a>
+                </div>
             </div>
 
-            <!-- Row 5 -->
+            <div class="card">
+                <h2><a href="https://www.nytimes.com/section/learning" target="_blank" style="color: inherit; text-decoration: none; display: flex; align-items: center;"><span class="emoji-icon">🗞️</span>NYT Learning Network</a></h2>
+                 <div style="margin-top: auto;">
+                    <a href="https://www.nytimes.com/column/learning-student-opinion" target="_blank" class="nyt-link">Student Opinion</a>
+                    <a href="https://www.nytimes.com/spotlight/accessible-activities" target="_blank" class="nyt-link">Picture Prompts</a>
+                    <a href="https://www.nytimes.com/column/learning-word-of-the-day" target="_blank" class="nyt-link">Word of the Day</a>
+                    <a href="https://www.nytimes.com/spotlight/learning-contests" target="_blank" class="nyt-link">Contests</a>
+                </div>
+            </div>
+
             <div class="card">
                 <h2><span class="emoji-icon">📚</span>Educational Resources</h2>
                 <p style="color: var(--text-secondary); margin-bottom: 15px;">Quick access to your favorite educational platforms</p>
@@ -678,7 +696,7 @@
                     </a>
                     <a href="https://www.math-play.com/" target="_blank" class="resource-link">
                         <span class="resource-emoji">🎮</span>
-                        Math Playground
+                        Math Play
                     </a>
                     <a href="https://quizizz.com/" target="_blank" class="resource-link">
                         <span class="resource-emoji">❓</span>
@@ -735,7 +753,6 @@
                 </div>
             </div>
 
-            <!-- Row 6 (Full Width) -->
             <div class="card timer-card">
                 <h2><span class="emoji-icon">⏱️</span>Class Timer</h2>
                 <div class="timer-display" id="timerDisplay">00:00</div>
@@ -760,7 +777,6 @@
     document.addEventListener('DOMContentLoaded', function () {
         const AGENDA_KEY = 'dailyHubAgenda';
 
-        // Collection of 200+ middle school memes
         const middleSchoolMemes = [
             "When the teacher says 'We have a pop quiz today' and you realize it's Monday 😭",
             "Monday morning feeling when you forgot to do homework over the weekend",
@@ -856,13 +872,11 @@
             const today = new Date().toDateString();
             
             if (savedCustomMeme && savedMemeDate === today) {
-                // Show saved custom meme for today
                 document.getElementById('daily-meme-text').textContent = savedCustomMeme;
                 return;
             }
             
             if (savedMemeImage && savedMemeDate === today) {
-                // Show saved meme image for today
                 const memeImageContainer = document.getElementById('meme-image-container');
                 const memeImage = document.getElementById('meme-image');
                 memeImage.src = savedMemeImage;
@@ -873,8 +887,6 @@
             
             const todayDate = new Date();
             const dayOfYear = Math.floor((todayDate - new Date(todayDate.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
-            
-            // Use the day of year to select a consistent meme for today
             const memeIndex = dayOfYear % middleSchoolMemes.length;
             const todaysMeme = middleSchoolMemes[memeIndex];
             
@@ -894,13 +906,10 @@
             
             let isCustomMode = false;
             
-            // Refresh button - shows a random meme
             refreshBtn.addEventListener('click', () => {
                 const randomIndex = Math.floor(Math.random() * middleSchoolMemes.length);
-                const randomMeme = middleSchoolMemes[randomIndex];
-                memeText.textContent = randomMeme;
+                memeText.textContent = middleSchoolMemes[randomIndex];
                 
-                // Hide custom input and image if showing
                 if (isCustomMode) {
                     customInput.style.display = 'none';
                     isCustomMode = false;
@@ -908,13 +917,11 @@
                 }
                 memeImageContainer.classList.remove('show');
                 
-                // Clear any saved custom content
                 sessionStorage.removeItem('customMeme');
                 sessionStorage.removeItem('customMemeDate');
                 sessionStorage.removeItem('memeImage');
             });
             
-            // Upload/Custom text button - toggles custom input
             uploadBtn.addEventListener('click', () => {
                 memeImageContainer.classList.remove('show');
                 if (!isCustomMode) {
@@ -926,7 +933,6 @@
                     const customText = customInput.value.trim();
                     if (customText) {
                         memeText.textContent = customText;
-                        // Save custom meme for today
                         const today = new Date().toDateString();
                         sessionStorage.setItem('customMeme', customText);
                         sessionStorage.setItem('customMemeDate', today);
@@ -939,12 +945,10 @@
                 }
             });
             
-            // Image meme button
             imageMemeBtn.addEventListener('click', () => {
                 memeImageInput.click();
             });
             
-            // Handle image upload
             memeImageInput.addEventListener('change', function() {
                 if (this.files && this.files[0]) {
                     const reader = new FileReader();
@@ -953,13 +957,11 @@
                         memeImageContainer.classList.add('show');
                         memeText.textContent = '';
                         
-                        // Save image meme for today
                         const today = new Date().toDateString();
                         sessionStorage.setItem('memeImage', e.target.result);
                         sessionStorage.setItem('customMemeDate', today);
                         sessionStorage.removeItem('customMeme');
                         
-                        // Hide custom input if showing
                         if (isCustomMode) {
                             customInput.style.display = 'none';
                             isCustomMode = false;
@@ -970,7 +972,6 @@
                 }
             });
             
-            // Delete button - removes current meme and shows placeholder
             deleteBtn.addEventListener('click', () => {
                 memeText.textContent = "No meme selected for today.";
                 memeImageContainer.classList.remove('show');
@@ -979,13 +980,11 @@
                 uploadBtn.textContent = '✏️ Text';
                 isCustomMode = false;
                 
-                // Clear any saved custom content
                 sessionStorage.removeItem('customMeme');
                 sessionStorage.removeItem('customMemeDate');
                 sessionStorage.removeItem('memeImage');
             });
             
-            // Handle Enter key in custom input
             customInput.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
@@ -1020,7 +1019,6 @@
                     isRunning = false;
                     timerDisplay.textContent = '00:00';
                     progressBar.style.width = '100%';
-                    // Play sound notification (simplified)
                     const audio = new Audio("data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU" + Array(300).join("12345678"));
                     audio.play().catch(() => console.log('Audio playback failed'));
                     return;
@@ -1108,41 +1106,23 @@
             const feedContainer = document.getElementById('rss-feed');
             const refreshBtn = document.getElementById('refresh-rss');
             
-            // Add refresh button functionality
             refreshBtn.addEventListener('click', fetchRssFeed);
             
             feedContainer.innerHTML = '<div class="rss-loading">Fetching latest educational videos...</div>';
             
-            // Simplified approach - show fallback content with direct links
             setTimeout(() => {
                 feedContainer.innerHTML = `
-                    <div style="text-align: center; color: var(--text-secondary); margin: 20px 0;">
-                        <p>🎬 Check out these amazing educational videos!</p>
-                    </div>
                     <div class="rss-item">
                         <a href="https://thekidshouldseethis.com/post/the-science-of-snowflakes" target="_blank">The Science of Snowflakes ❄️</a>
                         <div class="rss-description">Explore the fascinating world of snowflake formation and crystalline structures.</div>
-                        <div class="rss-date">Educational • Science</div>
                     </div>
                     <div class="rss-item">
                         <a href="https://thekidshouldseethis.com/post/octopus-intelligence-problem-solving" target="_blank">Octopus Intelligence & Problem Solving 🐙</a>
                         <div class="rss-description">Discover how octopuses use their incredible intelligence to solve complex problems.</div>
-                        <div class="rss-date">Educational • Marine Biology</div>
                     </div>
                     <div class="rss-item">
                         <a href="https://thekidshouldseethis.com/post/how-does-the-internet-work" target="_blank">How Does the Internet Work? 🌐</a>
                         <div class="rss-description">A visual journey through data packets, servers, and global connectivity.</div>
-                        <div class="rss-date">Educational • Technology</div>
-                    </div>
-                    <div class="rss-item">
-                        <a href="https://thekidshouldseethis.com/post/the-mathematics-of-music" target="_blank">The Mathematics of Music 🎵</a>
-                        <div class="rss-description">Learn how math creates harmony, rhythm, and the sounds we love.</div>
-                        <div class="rss-date">Educational • Math & Music</div>
-                    </div>
-                    <div class="rss-item">
-                        <a href="https://thekidshouldseethis.com/post/biomimicry-nature-inspired-inventions" target="_blank">Biomimicry: Nature-Inspired Inventions 🦎</a>
-                        <div class="rss-description">How scientists and engineers learn from nature to create amazing technologies.</div>
-                        <div class="rss-date">Educational • Engineering</div>
                     </div>
                 `;
             }, 1000);
@@ -1153,7 +1133,6 @@
             const data = {
                 learningObjective: document.getElementById('learningObjective').value,
                 selectedClass: document.getElementById('class-selector').value,
-                lastSaved: new Date().toISOString()
             };
             
             Object.keys(data).forEach(key => {
@@ -1171,7 +1150,6 @@
             if (selectedClass) document.getElementById('class-selector').value = selectedClass;
         }
 
-        // Auto-save functionality
         const autoSaveElements = ['learningObjective', 'class-selector'];
         autoSaveElements.forEach(id => {
             const element = document.getElementById(id);
@@ -1239,15 +1217,13 @@
             const newItem = createAgendaElement('New agenda item', Date.now());
             agendaList.appendChild(newItem);
             
-            // Focus on the new item for editing
             const textSpan = newItem.querySelector('.agenda-text');
             textSpan.focus();
-            textSpan.selectAll ? textSpan.selectAll() : document.execCommand('selectAll', false, null);
+            document.execCommand('selectAll', false, null);
             
             saveAgenda();
         }
 
-        // Make deleteAgendaItem globally available
         window.deleteAgendaItem = function(button) {
             button.parentElement.remove();
             saveAgenda();
@@ -1260,9 +1236,7 @@
     let previousInput = '';
 
     function appendToDisplay(value) {
-        const display = document.getElementById('calc-display');
-        
-        if (value === '/' || value === '*' || value === '-' || value === '+') {
+        if (['/', '*', '-', '+'].includes(value)) {
             if (currentInput !== '' && previousInput !== '') {
                 calculate();
             }
@@ -1270,12 +1244,9 @@
             previousInput = currentInput;
             currentInput = '';
         } else if (value === '^') {
-            // Handle exponent (square for now, can be expanded)
             if (currentInput !== '') {
-                const num = parseFloat(currentInput);
-                const result = Math.pow(num, 2);
-                currentInput = result.toString();
-                display.value = currentInput;
+                currentInput = Math.pow(parseFloat(currentInput), 2).toString();
+                document.getElementById('calc-display').value = currentInput;
             }
             return;
         } else {
@@ -1286,57 +1257,35 @@
     }
 
     function toggleSign() {
-        const display = document.getElementById('calc-display');
         if (currentInput !== '') {
-            if (currentInput.startsWith('-')) {
-                currentInput = currentInput.substring(1);
-            } else {
-                currentInput = '-' + currentInput;
-            }
-            display.value = currentInput;
+            currentInput = currentInput.startsWith('-') ? currentInput.substring(1) : '-' + currentInput;
+            document.getElementById('calc-display').value = currentInput;
         }
     }
 
     function calculateSquareRoot() {
-        const display = document.getElementById('calc-display');
         if (currentInput !== '') {
             const num = parseFloat(currentInput);
             if (num < 0) {
-                display.value = 'Error: √ negative';
-                setTimeout(() => clearCalc(), 2000);
+                document.getElementById('calc-display').value = 'Error';
+                setTimeout(clearCalc, 1500);
                 return;
             }
-            const result = Math.sqrt(num);
-            currentInput = result.toString();
-            display.value = currentInput;
+            currentInput = Math.sqrt(num).toString();
+            document.getElementById('calc-display').value = currentInput;
         }
     }
 
     function calculateCubeRoot() {
-        const display = document.getElementById('calc-display');
         if (currentInput !== '') {
-            const num = parseFloat(currentInput);
-            const result = Math.cbrt(num);
-            currentInput = result.toString();
-            display.value = currentInput;
+            currentInput = Math.cbrt(parseFloat(currentInput)).toString();
+            document.getElementById('calc-display').value = currentInput;
         }
     }
 
     function updateDisplay() {
         const display = document.getElementById('calc-display');
-        if (currentInput === '') {
-            display.value = previousInput + ' ' + getOperatorSymbol(operator);
-        } else {
-            display.value = currentInput;
-        }
-    }
-
-    function getOperatorSymbol(op) {
-        switch(op) {
-            case '*': return '×';
-            case '/': return '÷';
-            default: return op;
-        }
+        display.value = currentInput || (previousInput + ' ' + (operator || ''));
     }
 
     function calculate() {
@@ -1354,7 +1303,7 @@
                 case '/': 
                     if (current === 0) {
                         display.value = 'Error';
-                        clearCalc();
+                        setTimeout(clearCalc, 1500);
                         return;
                     }
                     result = prev / current; 
@@ -1362,8 +1311,7 @@
                 default: return;
             }
             
-            // Round to avoid floating point errors
-            result = Math.round(result * 100000000) / 100000000;
+            result = Math.round(result * 1e8) / 1e8;
             
             display.value = result;
             currentInput = result.toString();
@@ -1385,39 +1333,6 @@
             updateDisplay();
         }
     }
-
-    // Add keyboard support for calculator
-    document.addEventListener('keydown', function(e) {
-        if (document.activeElement.id === 'calc-display') {
-            e.preventDefault();
-            
-            if (e.key >= '0' && e.key <= '9') {
-                appendToDisplay(e.key);
-            } else if (e.key === '.') {
-                appendToDisplay('.');
-            } else if (e.key === '+' || e.key === '-') {
-                appendToDisplay(e.key);
-            } else if (e.key === '*') {
-                appendToDisplay('*');
-            } else if (e.key === '/') {
-                appendToDisplay('/');
-            } else if (e.key === 'Enter' || e.key === '=') {
-                calculate();
-            } else if (e.key === 'Escape' || e.key === 'c' || e.key === 'C') {
-                clearCalc();
-            } else if (e.key === 'Backspace') {
-                deleteLast();
-            } else if (e.key === 's' || e.key === 'S') {
-                calculateSquareRoot();
-            } else if (e.key === 'r' || e.key === 'R') {
-                calculateCubeRoot();
-            } else if (e.key === '^') {
-                appendToDisplay('^');
-            } else if (e.key === 'n' || e.key === 'N') {
-                toggleSign();
-            }
-        }
-    });
     </script>
 </body>
 </html>
